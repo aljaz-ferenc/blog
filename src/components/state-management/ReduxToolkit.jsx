@@ -17,13 +17,11 @@ export default function ReduxToolkit() {
         <Code code={'addTodo(state, action) {\n    state = state.push(action.payload);\n},'}/>
         <p>Lastly we need to export actions and the reducer which are available on the slice. These actions will be dispatched from components when we want to update the state and the reducer is needed for subscribing components to the store.</p>
         <Code code={'export const actions = todoSlice.actions;\nexport const todoReducer = todoSlice.reducer;'}/>
-        SHOW THE WHOLE SLICE FILE
         <h3>Creating Store</h3>
         <p>In store.jsx we can import the configureStore method and the reducer we've exported in the previous steps.</p>
         <Code code={"//store.jsx\nimport {configureStore} from '@reduxjs/toolkit'\nimport { todoReducer } from './TodoSlice'"}/>
         <p>We can create and export the store by passing the reducer to the configureStore function.</p>
         <Code code={'//store.jsx\nconst store = configureStore({\n    reducer: todoReducer}\n)\n\nexport default store'}/>
-        SHOW THE WHOLE STORE FILE
         <p>Similar to Context, we need to provide the store using the Provider component and wrapping it around the app. We will do this in main.jsx.</p>
         <Code code={'//main.jsx\nimport store from "./store/store";\nimport { Provider } from "react-redux";\n\nReactDOM.createRoot(document.getElementById("root")).render(\n    <Provider store={store}>\n        <App />\n    </Provider>);'}/>
         <h3>Consuming State</h3>
@@ -31,7 +29,6 @@ export default function ReduxToolkit() {
         <Code code={'//TodoList.jsx\nimport { useSelector} from "react-redux";\n'}/>
         <p>And subscribe to the store.</p>
         <Code code={'//TodoList.jsx\nconst store = useSelector(state => state)'}/>
-        SHOW THE TODOLIST FILE
         <h3>Updating State</h3>
         <p>A component can update the state by dispatching an action with a payload defined in our slice. For this we need a dispatch functions which is returned by the useDispatch hook from 'react-redux' and actions which are imported from the TodoSlice.jsx.</p>
         <Code code={'//Todo.jsx\nimport { useDispatch } from "react-redux";\nimport { actions } from "../store/TodoSlice";'}/>
