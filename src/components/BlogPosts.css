@@ -1,0 +1,12 @@
+.blog-posts{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.blog-post{
+    width: 20%;
+}
+
+.blog-post img{
+    width: 100%;
+}

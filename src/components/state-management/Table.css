@@ -1,0 +1,21 @@
+.comparison-table{
+    display: table;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.comparison-table td{
+    border: 1px solid #fff;
+    padding: 0 1rem;
+    width: max-content;
+}
+
+.comparison-table tr td:first-child{
+    text-align: center;
+}
+
+.comparison-table tr td:last-child{
+    text-align: center;
+}
+
