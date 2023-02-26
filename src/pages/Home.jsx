@@ -1,9 +1,7 @@
 import React from "react";
 import BlogPosts from "../components/BlogPosts";
-import { useNavigate } from "react-router";
 
 export default function Home() {
-  const navigate = useNavigate();
 
   return (
     <div>

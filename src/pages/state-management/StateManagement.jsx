@@ -27,7 +27,6 @@ export default function StateManagement() {
         to loop through todos and create a <strong>Todo</strong> component for
         each one.
       </p>
-      FILE IMAGE GOES HERE
       <UseState />
       <Context />
       <ReduxToolkit />
