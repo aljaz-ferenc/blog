@@ -1,5 +1,4 @@
 import React from "react";
-import "./StateManagement.css";
 import Context from '../../components/state-management/Context'
 import ReduxToolkit from "../../components/state-management/ReduxToolkit";
 import UseState from "../../components/state-management/UseState";
